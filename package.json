@@ -6,6 +6,12 @@
     "name": "Anton Nguyen",
     "email": "anton@freshbooks.com"
   },
+  "contributors": [
+    {
+      "name": "Christoph Hartmann",
+      "email": "chris@lollyrock.com"
+    }
+  ],
   "preferGlobal": false,
   "dependencies": {
     "util": "0.4.9",
