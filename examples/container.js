@@ -5,17 +5,17 @@ var PosixSyslog = require('../lib/winston-posix-syslog').PosixSyslog;
 
 // 
 winston.loggers.add('node-posix-logger', {
-    console: {
-        level: 'silly',
-        colorize: 'true',
-        label: 'node-posix-logger'
-    },
-    PosixSyslog : {
-    	level: 'silly',
-    	colorize: 'true',
-    	label: 'node-posix-logger',
-        identity: 'node-logger'
-    }
+  console: {
+    level: 'silly',
+    colorize: 'true',
+    label: 'node-posix-logger'
+  },
+  PosixSyslog: {
+    level: 'silly',
+    colorize: 'true',
+    label: 'node-posix-logger',
+    identity: 'node-logger'
+  }
 });
 
 var logger = winston.loggers.get('node-posix-logger');

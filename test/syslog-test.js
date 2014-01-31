@@ -7,18 +7,20 @@
  */
 
 var path = require('path'),
-    vows = require('vows'),
-    assert = require('assert'),
-    winston = require('winston'),
-    helpers = require('winston/test/helpers');
+  vows = require('vows'),
+  assert = require('assert'),
+  winston = require('winston'),
+  helpers = require('winston/test/helpers');
 
 var PosixSyslog = require('../lib/winston-posix-syslog').PosixSyslog,
-    npmTransport = new (winston.transports.PosixSyslog)(),
-    syslogTransport = new (winston.transports.PosixSyslog)({ levels: winston.config.syslog.levels })
+  npmTransport = new(winston.transports.PosixSyslog)(),
+  syslogTransport = new(winston.transports.PosixSyslog)({
+    levels: winston.config.syslog.levels
+  })
 
-var assertPosixSyslog = function(transport) {
-  assert.instanceOf(transport, PosixSyslog);
-  assert.isFunction(transport.log);
+  var assertPosixSyslog = function (transport) {
+    assert.instanceOf(transport, PosixSyslog);
+    assert.isFunction(transport.log);
 };
 
 vows.describe('winston-posix-syslog').addBatch({
